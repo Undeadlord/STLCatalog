@@ -6,6 +6,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.scrolledtext import ScrolledText
 import os
+import customtkinter as ctk
 
 from app_config import DEFAULT_TAGS, load_settings, save_settings
 from database_manager import DatabaseManager
@@ -17,6 +18,10 @@ from ui.file_manager import (
 )
 from ui.viewer_integration import view_selected_stl
 from tag_manager import open_tag_manager
+
+ctk.set_appearance_mode("System") # Modes: "System" (uses OS setting), "Dark", "Light"
+ctk.set_default_color_theme("blue") # Themes: "blue" (default), "dark-blue", "green"
+
 
 class STLCatalogApp:
     """Main application class for STL Catalog"""
